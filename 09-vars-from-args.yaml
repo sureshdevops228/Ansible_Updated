@@ -1,0 +1,9 @@
+ name: variables from play level
+  host: localhost
+  tasks:                 
+  - name: check variables
+    ansible.builtin.debug:
+     msg: "Hello {{PERSON}} Good {{WISHES}}"
+
+#We have pass the variable values from command line
+#ansibe-playbook -i inventory.ini -e ansible_user=centos -e ansible_password=DevOps321 -e "PERSON"=Siva Kumar -e "WISHES"=Morning 09-vars-from-args.yaml
